@@ -100,7 +100,10 @@ generated to provide linkage:
   code
 
 The unwinder relies on the gdb stack unwinder API so it will only work
-with releases from gdb-7.10 onwards. Note also that your gdb should
+with releases from gdb-7.10 onwards. Additionally, due to a 
+[bug in gdb](https://sourceware.org/bugzilla/show_bug.cgi?id=22748)
+it might not work in gdb versions 8.0-10.0 but should work from 10.1.
+Note also that your gdb should
 have been built to use python3 for preference and at the very least
 ought to be built to use python 2.7.
 
